@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "$schemaVersion": "0.0.1",
-    "$id": "https://smart-data-models.github.io/datamodel.DistributedLedgerTech/DLTtxRecipt/schema.json",
+    "$id": "https://smart-data-models.github.io/datamodel.DistributedLedgerTech/DLTtxReceipt/schema.json",
     "title": " Smart Data Models - Distributed Ledger Technology/ Blockchain Recipts",
     "description": "Description of the data model.",
     "type": "object",
@@ -16,8 +16,8 @@
             "properties": {
                 "type": {
                     "type": "string",
-                    "enum" : ["DLTTxRecipt"],
-                    "description": "Property. NSGI Entity Type. it has to be DLTTxRecipt"
+                    "enum" : ["DLTtxReceipt"],
+                    "description": "Property. NSGI Entity Type. it has to be DLTtxReceipt"
                 },
                 "refEntity": {
                     "anyOf": [
@@ -34,11 +34,11 @@
                             "description": "Property. Identifier format of any NGSI entity"
                         }
                     ],
-                    "description": "Relationship. Model:'http://schema.org/URL'. Entity presisted in the DLT"
+                    "description": "Relationship. Model:'http://schema.org/URL'. Entity persisted in the DLT"
                 },
                 "TxRecipts": {
                     "type": "object",
-                    "description": "Property. Transaction Recipt",
+                    "description": "Property. Transaction Receipt",
                     "properties": {
                         "to": {
                             "type": "string",
@@ -63,7 +63,7 @@
                                 },
                                 "data": {
                                     "type": "string",
-                                    "description": "Property. Model:'https://schema.org/Text'. contains one or more 32 Bytes non-indexed arguments of the log"
+                                    "description": "Property. Model:'https://schema.org/Text'. Contains one or more 32 Bytes non-indexed arguments of the log"
                                 },
                                 "topics": {
                                     "type": "object",
@@ -72,40 +72,40 @@
                                 },
                                 "address": {
                                     "type": "string",
-                                    "description": "Property. Model:'https://schema.org/Text'. address from which this log originated"
+                                    "description": "Property. Model:'https://schema.org/Text'. Address from which this log originated"
                                 },
                                 "removed": {
                                     "type": "boolean",
-                                    "description": "Property. Model:'https://schema.org/Boolean'. true when the log was removed, due to a chain reorganization. false if its a valid log"
+                                    "description": "Property. Model:'https://schema.org/Boolean'. True when the log was removed, due to a chain reorganization. False if its a valid log"
                                 },
                                 "logIndex": {
                                     "type": "integer",
                                     "minimum": 0,
-                                    "description": "Property. Model:'https://schema.org/Number'.  integer of the log index position in the block. null when its pending log"
+                                    "description": "Property. Model:'https://schema.org/Number'.  Integer of the log index position in the block. null when its pending log"
                                 },
                                 "blockHash": {
                                     "type": "string",
-                                    "description": "Property. Model:'https://schema.org/Text'. hash of the block where this log was in"
+                                    "description": "Property. Model:'https://schema.org/Text'. Hash of the block where this log was in"
                                 },
                                 "blockNumber": {
                                     "type": "integer",
                                     "minimum": 0,
-                                    "description": "Property. Model:'https://schema.org/Number'. the block number where this log was in. null when its pending. null when its pending log"
+                                    "description": "Property. Model:'https://schema.org/Number'. The block number where this log was in. null when its pending. null when its pending log"
                                 },
                                 "transactionHash": {
                                     "type": "string",
-                                    "description": "Property. Model:'https://schema.org/Text'. hash of the transactions this log was created from. null when its pending log"
+                                    "description": "Property. Model:'https://schema.org/Text'. Hash of the transactions this log was created from. null when its pending log"
                                 },
                                 "transactionIndex": {
                                     "type": "integer",
                                     "minimum": 0,
-                                    "description": "Property. Model:'https://schema.org/Number'.  integer of the transactions index position log was created from. null when its pending log."
+                                    "description": "Property. Model:'https://schema.org/Number'.  Integer of the transactions index position log was created from. null when its pending log."
                                 }
                             }
                         },
                         "status": {
                             "type": "boolean",
-                            "description": "Property. Model:'https://schema.org/Boolean'. true or false — which informs us if the txn was reverted or not — in this case it was true (0x1)"
+                            "description": "Property. Model:'https://schema.org/Boolean'. True or False — which informs us if the txn was reverted or not — in this case it was true (0x1)"
                         },
                         "dltType": { 
                             "type": "string",
@@ -114,11 +114,11 @@
                         },
                         "gasUsed": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. the amount of gas used by this specific transaction"
+                            "description": "Property. Model:'https://schema.org/Text'. The amount of gas used by this specific transaction"
                         },
                         "blockHash": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. hash of the block of the transaction"
+                            "description": "Property. Model:'https://schema.org/Text'. Hash of the block of the transaction"
                         },
                         "logsBloom": {
                             "type": "string",
@@ -126,35 +126,35 @@
                         },
                         "objectType": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. type of object has been persisted"
+                            "description": "Property. Model:'https://schema.org/Text'. Type of object has been persisted"
                         },
                         "blockNumber": {
                             "type": "integer",
                             "minimum": 0,
-                            "description": "Property. Model:'https://schema.org/Number'. block number of the transaction"
+                            "description": "Property. Model:'https://schema.org/Number'. Block number of the transaction"
                         },
                         "storageType": {
                             "type": "string",
                             "enum": ["iota", "ipfs", "merkletree"],
-                            "description": "Property. Model:'https://schema.org/Text'. type of stroage used to persist payload"
+                            "description": "Property. Model:'https://schema.org/Text'. Enum:'iota, ipfs, merkletree'. Type of stroage used to persist payload"
                         },
                         "transactionHash": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. hash of the transaction"
+                            "description": "Property. Model:'https://schema.org/Text'. Hash of the transaction"
                         },
                         "contractAddress": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. contract address created, if the transaction was a contract creation, otherwise null"
+                            "description": "Property. Model:'https://schema.org/Text'. Contract address created, if the transaction was a contract creation, otherwise null"
                         },
                         "transactionIndex": {
                             "type": "integer",
                             "minimum": 0,
-                            "description": "Property. Model:'https://schema.org/Number'. integer of the transactions index position in the block"
+                            "description": "Property. Model:'https://schema.org/Number'. Integer of the transactions index position in the block"
                         },
                         "cumulativeGasUsed": {
                             "type": "integer",
                             "minimum": 0,
-                            "description": "Property. Model:'https://schema.org/Number'. total amount of gas used when this transaction was executed in the block"
+                            "description": "Property. Model:'https://schema.org/Number'. Total amount of gas used when this transaction was executed in the block"
                         }
                     }
                 }
