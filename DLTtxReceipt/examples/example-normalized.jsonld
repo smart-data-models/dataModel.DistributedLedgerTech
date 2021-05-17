@@ -20,18 +20,14 @@
                 "0x117ef0a3887baaa508b007da020a6dc877e9f3e78883d885d11e272070e45175"
             ],
             "logAddress":"0x9a3DBCa554e9f6b9257aAa24010DA8377C57c17e",
-            "removed":[
-                "false"
-            ],
+            "removed":"false",
             "logIndex":0,
             "blockHash":"0xce0a88fa83d6b928f65f5eca653e98e81ed67702be1d4253c43b1ccb30d51f56",
             "blockNumber":345522,
             "transactionHash":"0x935dc16fa0b2000e609d6cc366c4fe2cb9557ec47ee94455e135af4259105517",
             "transactionIndex":0
         },
-        "status":[
-            "false"
-        ],
+        "status":"false",
         "dltType":"eth",
         "gasUsed":112188,
         "blockHash":"0xce0a88fa83d6b928f65f5eca653e98e81ed67702be1d4253c43b1ccb30d51f56",
