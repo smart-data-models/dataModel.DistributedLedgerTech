@@ -1,2 +1,5 @@
 # dataModel.DistributedLedgerTech
-Data models related to the management of DLT and blockchain
+
+### List of data models
+
+The following entity types are available:
