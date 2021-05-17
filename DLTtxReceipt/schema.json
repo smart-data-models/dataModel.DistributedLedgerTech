@@ -51,7 +51,7 @@
                         "keys": {
                             "type": "array",
                             "description": "Property. Payload keys used in transaction payload",
-                            "items": {}
+                            "items": {"type": "string"}
                         },
                         "logs": {
                             "type": "object",
