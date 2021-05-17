@@ -362,7 +362,9 @@ DLTtxReceipt:
       enum:    
         - DLTtxReceipt    
       type: Property    
-  required: []    
+  required:    
+    - id    
+    - type    
   type: object    
 ```  
 </details>    
