@@ -3,7 +3,7 @@
     "$schemaVersion": "0.0.1",
     "$id": "https://smart-data-models.github.io/datamodel.DistributedLedgerTech/DLTtxReceipt/schema.json",
     "title": " Smart Data Models - Distributed Ledger Technology/ Blockchain Receipts",
-    "description": "Description of the data model.",
+    "description": "Description of a DLT receipt storing some of the attributes (keys) of a transaction.",
     "type": "object",
     "allOf": [
         {
