@@ -3,7 +3,7 @@
     "type":"DLTtxReceipt",
     "refEntity":{
         "type":"Relationship",
-        "value":"urn:ngsi-ld:Animal:1"
+        "object":"urn:ngsi-ld:Animal:1"
     },
     "TxReceipts":{
         "type":"Property",

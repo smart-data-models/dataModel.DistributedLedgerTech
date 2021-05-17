@@ -1,9 +1,9 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
 -
- name:
- surname:
+ name: Har Preet
+ surname: Singh
  mail:
- organization:
- project: 
+ organization: FIWARE Foundation
+ project: https://cattlechain.eu
  comments: 
