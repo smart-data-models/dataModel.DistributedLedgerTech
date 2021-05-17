@@ -113,8 +113,9 @@
                             "description": "Property. Model:'https://schema.org/Text'. Enum:'eth, iota'. type of DLT used by the trasaction"
                         },
                         "gasUsed": {
-                            "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. The amount of gas used by this specific transaction"
+                            "type": "integer",
+                            "minimum": 0,
+                            "description": "Property. Model:'https://schema.org/Number'. The amount of gas used by this specific transaction"
                         },
                         "blockHash": {
                             "type": "string",
