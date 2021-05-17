@@ -2,7 +2,7 @@
 
 ## Description 
 
-Description of the data model.
+Description of a DLT receipt storing some of the attributes (keys) of a transaction.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.DistributedLedgerTech/DLTtxReceipt/swagger.yaml)
