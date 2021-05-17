@@ -4,7 +4,7 @@ Created for the project cattlechain.eu
 ### List of data models
 
 The following entity types are available:
-- [DLTtxReceipt](https://github.com/smart-data-models/dataModel.DistributedLedgerTech/blob/master/DLTtxReceipt/README.md). Description of the data model.
+- [DLTtxReceipt](https://github.com/smart-data-models/dataModel.DistributedLedgerTech/blob/master/DLTtxReceipt/README.md). Description of a DLT receipt storing some of the attributes (keys) of a transaction.
 
 
 
