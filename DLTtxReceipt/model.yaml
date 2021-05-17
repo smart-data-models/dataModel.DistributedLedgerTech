@@ -1,5 +1,5 @@
 DLTtxReceipt:
-  description: 'Description of the data model.'
+  description: 'Description of a DLT receipt storing some of the attributes (keys) of a transaction.'
   properties:
     TxReceipts:
       description: 'Transaction Receipt'
