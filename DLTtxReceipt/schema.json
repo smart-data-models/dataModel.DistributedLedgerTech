@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/schema#",
     "$schemaVersion": "0.0.1",
     "$id": "https://smart-data-models.github.io/datamodel.DistributedLedgerTech/DLTtxReceipt/schema.json",
-    "title": " Smart Data Models - Distributed Ledger Technology/ Blockchain Recipts",
+    "title": " Smart Data Models - Distributed Ledger Technology/ Blockchain Receipts",
     "description": "Description of the data model.",
     "type": "object",
     "allOf": [
@@ -110,7 +110,7 @@
                         "dltType": { 
                             "type": "string",
                             "enum": ["eth", "iota"],
-                            "description": "Property. Model:'https://schema.org/Text'. Enum:'eth, iota'. type of DLT used by the trasaction"
+                            "description": "Property. Model:'https://schema.org/Text'. Enum:'eth, iota'. type of DLT used by the transaction"
                         },
                         "gasUsed": {
                             "type": "integer",
@@ -137,7 +137,7 @@
                         "storageType": {
                             "type": "string",
                             "enum": ["iota", "ipfs", "merkletree"],
-                            "description": "Property. Model:'https://schema.org/Text'. Enum:'iota, ipfs, merkletree'. Type of stroage used to persist payload"
+                            "description": "Property. Model:'https://schema.org/Text'. Enum:'iota, ipfs, merkletree'. Type of storage used to persist payload"
                         },
                         "transactionHash": {
                             "type": "string",
