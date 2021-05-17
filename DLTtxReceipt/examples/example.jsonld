@@ -2,7 +2,7 @@
     "id":"urn:ngsi-ld:dataModel:id:VINF:36225393",
     "type":"DLTtxReceipt",
     "refEntity":{
-        "type":"object",
+        "type":"Relationship",
         "value":"urn:ngsi-ld:Animal:1"
     },
     "TxReceipts":{
