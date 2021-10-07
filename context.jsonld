@@ -1,0 +1,20 @@
+{
+    "@context": {
+        "TxReceipts": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/TxReceipts",
+        "address": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/address",
+        "alternateName": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/alternateName",
+        "areaServed": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/areaServed",
+        "dataProvider": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/dataProvider",
+        "dateCreated": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/dateCreated",
+        "dateModified": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/dateModified",
+        "description": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/description",
+        "id": "@id",
+        "location": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/location",
+        "name": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/name",
+        "owner": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/owner",
+        "refEntity": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/refEntity",
+        "seeAlso": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/seeAlso",
+        "source": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/source",
+        "type": "@type"
+    }
+}
