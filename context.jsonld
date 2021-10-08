@@ -1,20 +1,20 @@
 {
     "@context": {
         "TxReceipts": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/TxReceipts",
-        "address": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/address",
-        "alternateName": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/alternateName",
-        "areaServed": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/areaServed",
-        "dataProvider": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/dataProvider",
-        "dateCreated": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/dateCreated",
-        "dateModified": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/dateModified",
+        "address": "https://smartdatamodels.org/address",
+        "alternateName": "https://smartdatamodels.org/alternateName",
+        "areaServed": "https://smartdatamodels.org/areaServed",
+        "dataProvider": "https://smartdatamodels.org/dataProvider",
+        "dateCreated": "https://smartdatamodels.org/dateCreated",
+        "dateModified": "https://smartdatamodels.org/dateModified",
         "description": "http://purl.org/dc/terms/description",
         "id": "@id",
         "location": "ngsi-ld:location",
-        "name": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/name",
-        "owner": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/owner",
+        "name": "https://smartdatamodels.org/name",
+        "owner": "https://smartdatamodels.org/owner",
         "refEntity": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/refEntity",
-        "seeAlso": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/seeAlso",
-        "source": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/source",
+        "seeAlso": "https://smartdatamodels.org/seeAlso",
+        "source": "https://smartdatamodels.org/source",
         "type": "@type"
     }
 }
