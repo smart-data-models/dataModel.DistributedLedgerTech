@@ -6,7 +6,7 @@ Version: 0.0.1
 Description of a DLT receipt storing some of the attributes (keys) of a transaction.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.DistributedLedgerTech/blob/master/DLTtxReceipt/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.DistributedLedgerTech/master/DLTtxReceipt/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.DistributedLedgerTech/blob/master/DLTtxReceipt/doc/spec.md)
 
