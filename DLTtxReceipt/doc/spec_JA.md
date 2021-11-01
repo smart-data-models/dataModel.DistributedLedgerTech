@@ -448,7 +448,7 @@ DLTtxReceipt:
   "dateModified": "1980-07-30T13:43:48Z"  
 }  
 ```  
-#### DLTtxReceipt NGSI-v2 正規化例  
+#### DLTtxReceipt NGSI-v2 正規化された例  
 ここでは、正規化されたJSON-LD形式のDLTtxReceiptの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
