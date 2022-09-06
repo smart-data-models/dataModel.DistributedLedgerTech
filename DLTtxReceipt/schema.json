@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0.1",
+  "$schemaVersion": "0.0.2",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/datamodel.DistributedLedgerTech/DLTtxReceipt/schema.json",
   "title": " Smart Data Models - Distributed Ledger Technology/ Blockchain Receipts",
