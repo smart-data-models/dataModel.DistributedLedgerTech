@@ -1,15 +1,17 @@
-エンティティDLTtxReceipt  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティDLTtxReceipt  
 ==================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.DistributedLedgerTech/blob/master/DLTtxReceipt/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**トランザクションの属性（キー）の一部を保存するDLTレシートの説明。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**取引の属性（キー）の一部を保存したDLTレシートの記述。  
+バージョン: 0.0.2  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `TxReceipts`: トランザクションレシート  - `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refEntity`: DLT内で永続化されるエンティティ  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NSGIエンティティタイプ：DLTtxReceiptでなければなりません。    
-必須項目  
-- `id`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+- `TxReceipts`: 取引領収書  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `refEntity`: DLTに永続化されたエンティティ  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NSGI エンティティタイプ DLTtxReceipt でなければならない。    
+必要なプロパティ  
+- `id`  - `type`  ## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 DLTtxReceipt:    
@@ -78,7 +80,8 @@ DLTtxReceipt:
               type: boolean    
             topics:    
               description: 'Property. Array of 0 to 4 32 Bytes DATA of indexed log arguments. (In solidity: The first topic is the hash of the signature of the event (e.g. Deposit(address,bytes32,uint256)), except you declared the event with the anonymous specifier.)'    
-              items: {}    
+              items:    
+                type: string    
               type: array    
             transactionHash:    
               description: 'Property. Model:''https://schema.org/Text''. Hash of the transactions this log was created from. null when its pending log'    
@@ -396,11 +399,17 @@ DLTtxReceipt:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.DistributedLedgerTech/blob/master/DLTtxReceipt/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/datamodel.DistributedLedgerTech/DLTtxReceipt/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## ペイロードの例  
-#### DLTtxReceipt NGSI-v2 key-values の例。  
-DLTtxReceiptをkey-valuesとしてJSON-LD形式で出力した例を示します。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### DLTtxReceipt NGSI-v2 key-value の例。  
+DLTtxReceiptをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:dataModel:id:VINF:36225393",  
@@ -448,8 +457,8 @@ DLTtxReceipt:
   "dateModified": "1980-07-30T13:43:48Z"  
 }  
 ```  
-#### DLTtxReceipt NGSI-v2 正規化された例  
-ここでは、正規化されたJSON-LD形式のDLTtxReceiptの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### DLTtxReceipt NGSI-v2 正規化例  
+DLTtxReceipt を JSON-LD 形式で正規化した例を示す。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "VINF.36225393",  
@@ -509,74 +518,70 @@ DLTtxReceipt:
   }  
 }  
 ```  
-#### DLTtxReceipt NGSI-LD のキーバリューの例。  
-ここでは、DLTtxReceiptをkey-valuesとしてJSON-LD形式にした例を紹介します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### DLTtxReceipt NGSI-LD キー値の例  
+DLTtxReceiptをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:dataModel:id:VINF:36225393",  
-  "type": "DLTtxReceipt",  
-  "refEntity": "urn:ngsi-ld:Animal:1",  
-  "TxReceipts": {  
-    "to": "0x9a3dbca554e9f6b9257aaa24010da8377c57c17e",  
-    "from": "0x4c962a968ff8cc5c99688602969ada5caa3a92cb",  
-    "keys": [  
-      "id",  
-      "type",  
-      "species",  
-      "legalId",  
-      "birthdate",  
-      "@context"  
-    ],  
-    "logs": {  
-      "id": "log_e04a3da4",  
-      "data": "0x0000000000000000000000004c962a968ff8cc5c99688602969ada5caa3a92cb75726e3a6e6773692d6c643a416e696d616c3a310000000000000000000000000000000000000000000000000000000000000000000000000000000060802b30000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000317a6470754171367250624133745a6b694441396d425355337a3872355a37544739716970754a4c45413570384145714c58000000000000000000000000000000",  
-      "topics": [  
-        "0x117ef0a3887baaa508b007da020a6dc877e9f3e78883d885d11e272070e45175"  
-      ],  
-      "logAddress": "0x9a3DBCa554e9f6b9257aAa24010DA8377C57c17e",  
-      "removed": false,  
-      "logIndex": 0,  
-      "blockHash": "0xce0a88fa83d6b928f65f5eca653e98e81ed67702be1d4253c43b1ccb30d51f56",  
-      "blockNumber": 345522,  
-      "transactionHash": "0x935dc16fa0b2000e609d6cc366c4fe2cb9557ec47ee94455e135af4259105517",  
-      "transactionIndex": 0  
+    "id": "urn:ngsi-ld:dataModel:id:VINF:36225393",  
+    "type": "DLTtxReceipt",  
+    "TxReceipts": {  
+        "to": "0x9a3dbca554e9f6b9257aaa24010da8377c57c17e",  
+        "from": "0x4c962a968ff8cc5c99688602969ada5caa3a92cb",  
+        "keys": [  
+            "id",  
+            "type",  
+            "species",  
+            "legalId",  
+            "birthdate",  
+            "@context"  
+        ],  
+        "logs": {  
+            "id": "log_e04a3da4",  
+            "data": "0x0000000000000000000000004c962a968ff8cc5c99688602969ada5caa3a92cb75726e3a6e6773692d6c643a416e696d616c3a310000000000000000000000000000000000000000000000000000000000000000000000000000000060802b30000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000317a6470754171367250624133745a6b694441396d425355337a3872355a37544739716970754a4c45413570384145714c58000000000000000000000000000000",  
+            "topics": [  
+                "0x117ef0a3887baaa508b007da020a6dc877e9f3e78883d885d11e272070e45175"  
+            ],  
+            "logAddress": "0x9a3DBCa554e9f6b9257aAa24010DA8377C57c17e",  
+            "removed": false,  
+            "logIndex": 0,  
+            "blockHash": "0xce0a88fa83d6b928f65f5eca653e98e81ed67702be1d4253c43b1ccb30d51f56",  
+            "blockNumber": 345522,  
+            "transactionHash": "0x935dc16fa0b2000e609d6cc366c4fe2cb9557ec47ee94455e135af4259105517",  
+            "transactionIndex": 0  
+        },  
+        "status": false,  
+        "dltType": "eth",  
+        "gasUsed": 112188,  
+        "blockHash": "0xce0a88fa83d6b928f65f5eca653e98e81ed67702be1d4253c43b1ccb30d51f56",  
+        "logsBloom": "0x00000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000002000000000000000000000000000000000000000000000000000000000",  
+        "objectType": "asset",  
+        "blockNumber": 345522,  
+        "storageType": "merkletree",  
+        "transactionHash": "0x935dc16fa0b2000e609d6cc366c4fe2cb9557ec47ee94455e135af4259105517",  
+        "contractAddress": "0x9a3DBCa554e9f6b9257aAa24010DA8377C57c17e",  
+        "transactionIndex": 0,  
+        "cumulativeGasUsed": 112188  
     },  
-    "status": false,  
-    "dltType": "eth",  
-    "gasUsed": 112188,  
-    "blockHash": "0xce0a88fa83d6b928f65f5eca653e98e81ed67702be1d4253c43b1ccb30d51f56",  
-    "logsBloom": "0x00000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000002000000000000000000000000000000000000000000000000000000000",  
-    "objectType": "asset",  
-    "blockNumber": 345522,  
-    "storageType": "merkletree",  
-    "transactionHash": "0x935dc16fa0b2000e609d6cc366c4fe2cb9557ec47ee94455e135af4259105517",  
-    "contractAddress": "0x9a3DBCa554e9f6b9257aAa24010DA8377C57c17e",  
-    "transactionIndex": 0,  
-    "cumulativeGasUsed": 112188  
-  },  
-  "dateCreated": "2005-10-29T02:48:51Z",  
-  "dateModified": "1980-07-30T13:43:48Z",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "dateCreated": "2005-10-29T02:48:51Z",  
+    "dateModified": "1980-07-30T13:43:48Z",  
+    "refEntity": "urn:ngsi-ld:Animal:1",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.DistributedLedgerTech/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### DLTtxReceipt NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のDLTtxReceiptの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### DLTtxReceipt NGSI-LD 正規化例  
+DLTtxReceipt を JSON-LD 形式で正規化した例です。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-    "id":"urn:ngsi-ld:dataModel:id:VINF:36225393",  
-    "type":"DLTtxReceipt",  
-    "refEntity":{  
-        "type":"Relationship",  
-        "object":"urn:ngsi-ld:Animal:1"  
-    },  
-    "TxReceipts":{  
-        "type":"Property",  
-        "value":{  
-            "to":"0x9a3dbca554e9f6b9257aaa24010da8377c57c17e",  
-            "from":"0x4c962a968ff8cc5c99688602969ada5caa3a92cb",  
-            "keys":[  
+    "id": "urn:ngsi-ld:dataModel:id:VINF:36225393",  
+    "type": "DLTtxReceipt",  
+    "TxReceipts": {  
+        "type": "Property",  
+        "value": {  
+            "to": "0x9a3dbca554e9f6b9257aaa24010da8377c57c17e",  
+            "from": "0x4c962a968ff8cc5c99688602969ada5caa3a92cb",  
+            "keys": [  
                 "id",  
                 "type",  
                 "species",  
@@ -584,51 +589,53 @@ DLTtxReceipt:
                 "birthdate",  
                 "@context"  
             ],  
-            "logs":{  
-                "id":"log_e04a3da4",  
-                "data":"0x0000000000000000000000004c962a968ff8cc5c99688602969ada5caa3a92cb75726e3a6e6773692d6c643a416e696d616c3a310000000000000000000000000000000000000000000000000000000000000000000000000000000060802b30000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000317a6470754171367250624133745a6b694441396d425355337a3872355a37544739716970754a4c45413570384145714c58000000000000000000000000000000",  
-                "topics":[  
+            "logs": {  
+                "id": "log_e04a3da4",  
+                "data": "0x0000000000000000000000004c962a968ff8cc5c99688602969ada5caa3a92cb75726e3a6e6773692d6c643a416e696d616c3a310000000000000000000000000000000000000000000000000000000000000000000000000000000060802b30000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000317a6470754171367250624133745a6b694441396d425355337a3872355a37544739716970754a4c45413570384145714c58000000000000000000000000000000",  
+                "topics": [  
                     "0x117ef0a3887baaa508b007da020a6dc877e9f3e78883d885d11e272070e45175"  
                 ],  
-                "logAddress":"0x9a3DBCa554e9f6b9257aAa24010DA8377C57c17e",  
-                "removed":false,  
-                "logIndex":0,  
-                "blockHash":"0xce0a88fa83d6b928f65f5eca653e98e81ed67702be1d4253c43b1ccb30d51f56",  
-                "blockNumber":345522,  
-                "transactionHash":"0x935dc16fa0b2000e609d6cc366c4fe2cb9557ec47ee94455e135af4259105517",  
-                "transactionIndex":0  
+                "logAddress": "0x9a3DBCa554e9f6b9257aAa24010DA8377C57c17e",  
+                "removed": false,  
+                "logIndex": 0,  
+                "blockHash": "0xce0a88fa83d6b928f65f5eca653e98e81ed67702be1d4253c43b1ccb30d51f56",  
+                "blockNumber": 345522,  
+                "transactionHash": "0x935dc16fa0b2000e609d6cc366c4fe2cb9557ec47ee94455e135af4259105517",  
+                "transactionIndex": 0  
             },  
-            "status":false,  
-            "dltType":"eth",  
-            "gasUsed":112188,  
-            "blockHash":"0xce0a88fa83d6b928f65f5eca653e98e81ed67702be1d4253c43b1ccb30d51f56",  
-            "logsBloom":"0x00000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000002000000000000000000000000000000000000000000000000000000000",  
-            "objectType":"asset",  
-            "blockNumber":345522,  
-            "storageType":"merkletree",  
-            "transactionHash":"0x935dc16fa0b2000e609d6cc366c4fe2cb9557ec47ee94455e135af4259105517",  
-            "contractAddress":"0x9a3DBCa554e9f6b9257aAa24010DA8377C57c17e",  
-            "transactionIndex":0,  
-            "cumulativeGasUsed":112188  
+            "status": false,  
+            "dltType": "eth",  
+            "gasUsed": 112188,  
+            "blockHash": "0xce0a88fa83d6b928f65f5eca653e98e81ed67702be1d4253c43b1ccb30d51f56",  
+            "logsBloom": "0x00000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000002000000000000000000000000000000000000000000000000000000000",  
+            "objectType": "asset",  
+            "blockNumber": 345522,  
+            "storageType": "merkletree",  
+            "transactionHash": "0x935dc16fa0b2000e609d6cc366c4fe2cb9557ec47ee94455e135af4259105517",  
+            "contractAddress": "0x9a3DBCa554e9f6b9257aAa24010DA8377C57c17e",  
+            "transactionIndex": 0,  
+            "cumulativeGasUsed": 112188  
         }  
     },  
-    "dateCreated":{  
-        "type":"Property",  
-        "value":{  
-            "@type":"DateTime",  
-            "@value":"1970-03-25T22:57:25Z"  
+    "dateCreated": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "1970-03-25T22:57:25Z"  
         }  
     },  
-    "dateModified":{  
-        "type":"Property",  
-        "value":{  
-            "@type":"DateTime",  
-            "@value":"2019-03-15T08:10:09Z"  
+    "dateModified": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2019-03-15T08:10:09Z"  
         }  
     },  
-    "@context":[  
-        "https://smartdatamodels.org/context.jsonld"  
-    ]  
+    "refEntity": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Animal:1"  
+    },  
+    "@context": []  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
