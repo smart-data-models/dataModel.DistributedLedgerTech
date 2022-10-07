@@ -60,5 +60,7 @@
         "type": "Relationship",
         "object": "urn:ngsi-ld:Animal:1"
     },
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.DistributedLedgerTech/master/context.jsonld"
+    ]
 }
