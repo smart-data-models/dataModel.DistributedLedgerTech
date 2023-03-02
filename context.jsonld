@@ -1,5 +1,6 @@
 {
     "@context": {
+        "DLTtxReceipt": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/DLTtxReceipt",
         "TxReceipts": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/TxReceipts",
         "address": "https://smartdatamodels.org/address",
         "alternateName": "https://smartdatamodels.org/alternateName",
