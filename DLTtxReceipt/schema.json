@@ -106,7 +106,7 @@
                                 "transactionIndex": {
                                     "type": "integer",
                                     "minimum": 0,
-                                    "description": "Property. Model:'https://schema.org/Number'.  Integer of the transactions index position log was created from. null when its pending log."
+                                    "description": "Property. Model:'https://schema.org/Number'.  Integer of the transactions index position log was created from. null when its pending log"
                                 }
                             }
                         },
