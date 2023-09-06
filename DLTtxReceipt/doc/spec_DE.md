@@ -14,8 +14,30 @@
 
 ## Liste der Eigenschaften  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
-- `TxReceipts[object]`: Transaktionsbeleg  - `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refEntity[*]`: Im DLT persistierte Entität  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type[string]`: NSGI Entity Type. Es muss DLTtxReceipt sein  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `TxReceipts[object]`: Transaktionsbeleg  	- `blockHash[string]`: Hash des Blocks der Transaktion  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `blockNumber[integer]`: Blocknummer der Transaktion  . Model: [https://schema.org/Number](https://schema.org/Number)  
+	- `contractAddress[string]`: Erstellte Vertragsadresse, wenn die Transaktion eine Vertragserstellung war, sonst null  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `cumulativeGasUsed[integer]`: Gesamtmenge an Gas, die bei der Ausführung dieser Transaktion im Block verbraucht wurde  . Model: [https://schema.org/Number](https://schema.org/Number)  
+	- `dltType[string]`: Enum:'eth, iota'. Typ des von der Transaktion verwendeten DLT  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `from[string]`: Kontoadresse des Benutzers/Dienstes, der für die Übermittlung der Transaktion verantwortlich ist (Adresse des msg.sender)  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `gasUsed[integer]`: Die für diese spezifische Transaktion verbrauchte Gasmenge  . Model: [https://schema.org/Number](https://schema.org/Number)  
+	- `keys[array]`: In der Transaktionsnutzlast verwendete Nutzlastschlüssel    
+	- `logs[object]`: Ein Protokolleintrag kann verwendet werden, um ein Ereignis innerhalb eines Smart Contracts (Ethereum) zu beschreiben    
+	- `logsBloom[string]`: 256-Byte-Bloom-Filter für Light-Clients zum schnellen Auffinden von zugehörigen Protokollen  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `objectType[string]`: Der Typ des Objekts wurde beibehalten  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `status[boolean]`: True oder False - gibt an, ob die Meldung zurückgenommen wurde oder nicht - in diesem Fall war es true (0x1)  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)  
+	- `storageType[string]`: Enum:'iota, ipfs, merkletree'. Art des für die Aufbewahrung der Nutzdaten verwendeten Speichers  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `to[string]`: Konto oder Vertragsadresse zur Transaktion wurde übermittelt  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `transactionHash[string]`: Hash der Transaktion  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel, Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: Die Ortschaft, in der sich die Adresse befindet, und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Ein Bezirk ist eine Art von Verwaltungseinheit, die in einigen Ländern von der lokalen Regierung verwaltet wird.    
+	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refEntity[*]`: Im DLT persistierte Entität  . Model: [http://schema.org/URL](http://schema.org/URL)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type[string]`: NSGI Entity Type. Es muss DLTtxReceipt sein.  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -29,186 +51,293 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 DLTtxReceipt:    
-  description: 'Description of a DLT receipt storing some of the attributes (keys) of a transaction.'    
+  description: Description of a DLT receipt storing some of the attributes (keys) of a transaction.    
   properties:    
     TxReceipts:    
-      description: 'Transaction Receipt'    
+      description: Transaction Receipt    
       properties:    
         blockHash:    
-          description: 'Property. Model:''https://schema.org/Text''. Hash of the block of the transaction'    
+          description: Hash of the block of the transaction    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         blockNumber:    
-          description: 'Property. Model:''https://schema.org/Number''. Block number of the transaction'    
+          description: Block number of the transaction    
           minimum: 0    
           type: integer    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
         contractAddress:    
-          description: 'Property. Model:''https://schema.org/Text''. Contract address created, if the transaction was a contract creation, otherwise null'    
+          description: 'Contract address created, if the transaction was a contract creation, otherwise null'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         cumulativeGasUsed:    
-          description: 'Property. Model:''https://schema.org/Number''. Total amount of gas used when this transaction was executed in the block'    
+          description: Total amount of gas used when this transaction was executed in the block    
           minimum: 0    
           type: integer    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
         dltType:    
-          description: 'Property. Model:''https://schema.org/Text''. Enum:''eth, iota''. type of DLT used by the transaction'    
+          description: 'Enum:''eth, iota''. type of DLT used by the transaction'    
           enum:    
             - eth    
             - iota    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         from:    
-          description: 'Property. Model:''https://schema.org/Text''. Account Address of the user/service responsible to submit the transaction (address of the msg.sender)'    
+          description: Account Address of the user/service responsible to submit the transaction (address of the msg.sender)    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         gasUsed:    
-          description: 'Property. Model:''https://schema.org/Number''. The amount of gas used by this specific transaction'    
+          description: The amount of gas used by this specific transaction    
           minimum: 0    
           type: integer    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
         keys:    
-          description: 'Property. Payload keys used in transaction payload'    
+          description: Payload keys used in transaction payload    
           items:    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
         logs:    
-          description: 'Property. A log record can be used to describe an event within a smart contract (Ethereum)'    
+          description: A log record can be used to describe an event within a smart contract (Ethereum)    
           properties:    
             blockHash:    
-              description: 'Property. Model:''https://schema.org/Text''. Hash of the block where this log was in'    
+              description: Hash of the block where this log was in    
               type: string    
+              x-ngsi:    
+                model: https://schema.org/Text    
+                type: Property    
             blockNumber:    
-              description: 'Property. Model:''https://schema.org/Number''. The block number where this log was in. null when its pending. null when its pending log'    
+              description: The block number where this log was in. null when its pending. null when its pending log    
               minimum: 0    
-              type: integer    
+              type: number    
+              x-ngsi:    
+                model: https://schema.org/Number    
+                type: Property    
             data:    
-              description: 'Property. Model:''https://schema.org/Text''. Contains one or more 32 Bytes non-indexed arguments of the log'    
+              description: Contains one or more 32 Bytes non-indexed arguments of the log    
               type: string    
+              x-ngsi:    
+                model: https://schema.org/Text    
+                type: Property    
             id:    
-              description: 'Property. Model:''https://schema.org/Text''. Log id'    
+              description: Log id    
               type: string    
+              x-ngsi:    
+                model: https://schema.org/Text    
+                type: Property    
             logAddress:    
-              description: 'Property. Model:''https://schema.org/Text''. Address from which this log originated'    
+              description: Address from which this log originated    
               type: string    
+              x-ngsi:    
+                model: https://schema.org/Text    
+                type: Property    
             logIndex:    
-              description: 'Property. Model:''https://schema.org/Number''.  Integer of the log index position in the block. null when its pending log'    
+              description: ' Integer of the log index position in the block. null when its pending log'    
               minimum: 0    
-              type: integer    
+              type: number    
+              x-ngsi:    
+                model: https://schema.org/Number    
+                type: Property    
             removed:    
-              description: 'Property. Model:''https://schema.org/Boolean''. True when the log was removed, due to a chain reorganization. False if its a valid log'    
+              description: 'True when the log was removed, due to a chain reorganization. False if its a valid log'    
               type: boolean    
+              x-ngsi:    
+                model: https://schema.org/Boolean    
+                type: Property    
             topics:    
-              description: 'Property. Array of 0 to 4 32 Bytes DATA of indexed log arguments. (In solidity: The first topic is the hash of the signature of the event (e.g. Deposit(address,bytes32,uint256)), except you declared the event with the anonymous specifier.)'    
+              description: 'Array of 0 to 4 32 Bytes DATA of indexed log arguments. (In solidity: The first topic is the hash of the signature of the event (e.g. Deposit(address,bytes32,uint256)), except you declared the event with the anonymous specifier.)'    
               items:    
                 type: string    
               type: array    
+              x-ngsi:    
+                type: Property    
             transactionHash:    
-              description: 'Property. Model:''https://schema.org/Text''. Hash of the transactions this log was created from. null when its pending log'    
+              description: Hash of the transactions this log was created from. null when its pending log    
               type: string    
+              x-ngsi:    
+                model: https://schema.org/Text    
+                type: Property    
             transactionIndex:    
-              description: 'Property. Model:''https://schema.org/Number''.  Integer of the transactions index position log was created from. null when its pending log.'    
+              description: ' Integer of the transactions index position log was created from. null when its pending log'    
               minimum: 0    
-              type: integer    
+              type: number    
+              x-ngsi:    
+                model: https://schema.org/Number    
+                type: Property    
           type: object    
+          x-ngsi:    
+            type: Property    
         logsBloom:    
-          description: 'Property. Model:''https://schema.org/Text''. 256 Bytes-bloom filter for light clients to quickly retrieve related logs'    
+          description: 256 Bytes-bloom filter for light clients to quickly retrieve related logs    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         objectType:    
-          description: 'Property. Model:''https://schema.org/Text''. Type of object has been persisted'    
+          description: Type of object has been persisted    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         status:    
-          description: 'Property. Model:''https://schema.org/Boolean''. True or False — which informs us if the txn was reverted or not — in this case it was true (0x1)'    
+          description: True or False — which informs us if the txn was reverted or not — in this case it was true (0x1)    
           type: boolean    
+          x-ngsi:    
+            model: https://schema.org/Boolean    
+            type: Property    
         storageType:    
-          description: 'Property. Model:''https://schema.org/Text''. Enum:''iota, ipfs, merkletree''. Type of storage used to persist payload'    
+          description: 'Enum:''iota, ipfs, merkletree''. Type of storage used to persist payload'    
           enum:    
             - iota    
             - ipfs    
             - merkletree    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         to:    
-          description: 'Property. Model:''https://schema.org/Text''. Account or Contract Address to transaction has been submitted'    
+          description: Account or Contract Address to transaction has been submitted    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         transactionHash:    
-          description: 'Property. Model:''https://schema.org/Text''. Hash of the transaction'    
+          description: Hash of the transaction    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         transactionIndex:    
-          description: 'Property. Model:''https://schema.org/Number''. Integer of the transactions index position in the block'    
+          description: Integer of the transactions index position in the block    
           minimum: 0    
           type: integer    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &dlttxreceipt_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -227,9 +356,11 @@ DLTtxReceipt:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -251,9 +382,11 @@ DLTtxReceipt:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -277,9 +410,11 @@ DLTtxReceipt:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -300,9 +435,11 @@ DLTtxReceipt:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -326,9 +463,11 @@ DLTtxReceipt:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -354,39 +493,59 @@ DLTtxReceipt:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *dlttxreceipt_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     refEntity:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Entity persisted in the DLT'    
+          x-ngsi:    
+            type: Property    
+      description: Entity persisted in the DLT    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Relationship    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -398,12 +557,12 @@ DLTtxReceipt:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NSGI Entity Type. it has to be DLTtxReceipt'    
+      description: NSGI Entity Type. it has to be DLTtxReceipt    
       enum:    
         - DLTtxReceipt    
       type: string    
@@ -541,7 +700,7 @@ DLTtxReceipt:
 ```  
 </details>  
 #### DLTtxReceipt NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für eine DLTtxReceipt im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine DLTtxReceipt im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
