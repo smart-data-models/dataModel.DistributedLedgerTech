@@ -8,9 +8,17 @@
         "addressRegion": "https://smartdatamodels.org/addressRegion",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
+        "bbox": {
+            "@container": "@list",
+            "@id": "geojson:bbox"
+        },
         "blockHash": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/blockHash",
         "blockNumber": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/blockNumber",
         "contractAddress": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/contractAddress",
+        "coordinates": {
+            "@container": "@list",
+            "@id": "geojson:coordinates"
+        },
         "cumulativeGasUsed": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/cumulativeGasUsed",
         "data": "ngsi-ld:data",
         "dataProvider": "https://smartdatamodels.org/dataProvider",
