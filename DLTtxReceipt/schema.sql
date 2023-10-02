@@ -1,3 +1,3 @@
-/* (Beta) Export of data model DLTtxReceipt of the subject dataModel.DistributedLedgerTech for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model DLTtxReceipt of the subject dataModel.DistributedLedgerTech for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE DLTtxReceipt_type AS ENUM ('DLTtxReceipt');
-CREATE TABLE DLTtxReceipt (TxReceipts json, address json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, location json, name text, owner json, refEntity text, seeAlso json, source text, type DLTtxReceipt_type);
+CREATE TABLE DLTtxReceipt (TxReceipts JSON, address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, name TEXT, owner JSON, source TEXT, type DLTtxReceipt_type);
