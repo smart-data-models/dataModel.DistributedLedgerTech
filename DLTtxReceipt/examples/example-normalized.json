@@ -2,11 +2,11 @@
   "id": "VINF.36225393",
   "type": "DLTtxReceipt",
   "refEntity": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "Animal.1"
   },
   "TxReceipts": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "to": "0x9a3dbca554e9f6b9257aaa24010da8377c57c17e",
       "from": "0x4c962a968ff8cc5c99688602969ada5caa3a92cb",
@@ -47,11 +47,11 @@
     }
   },
   "dateCreated": {
-    "type": "Property",
+    "type": "DateTime",
     "value": "1970-03-25T22:57:25Z"
   },
   "dateModified": {
-    "type": "Property",
+    "type": "DateTime",
     "value": "2019-03-15T08:10:09Z"
   }
 }
