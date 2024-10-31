@@ -10,17 +10,17 @@
         "areaServed": "https://smartdatamodels.org/areaServed",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "blockHash": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/blockHash",
         "blockNumber": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/blockNumber",
         "contractAddress": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/contractAddress",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "cumulativeGasUsed": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/cumulativeGasUsed",
-        "data": "ngsi-ld:data",
+        "data": "https://uri.etsi.org/ngsi-ld/data",
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
         "dateModified": "https://smartdatamodels.org/dateModified",
@@ -31,7 +31,7 @@
         "gasUsed": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/gasUsed",
         "id": "@id",
         "keys": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/keys",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "logAddress": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/logAddress",
         "logIndex": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/logIndex",
         "logs": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/logs",
@@ -46,7 +46,7 @@
         "removed": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/removed",
         "seeAlso": "https://smartdatamodels.org/seeAlso",
         "source": "https://smartdatamodels.org/source",
-        "status": "ngsi-ld:status",
+        "status": "https://uri.etsi.org/ngsi-ld/status",
         "storageType": "https://smartdatamodels.org/dataModel.DistributedLedgerTech/storageType",
         "streetAddress": "https://smartdatamodels.org/streetAddress",
         "streetNr": "https://smartdatamodels.org/streetNr",
